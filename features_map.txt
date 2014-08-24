@@ -1,0 +1,99 @@
+The run_analysis.R process converts the raw data set feature names to minimise collisions
+with the R syntax.
+The changes applied are, in order:
+
+- "()" and "-" occurrences are deleted
+- commas are replaced with dots
+- "(" or ")" are replaced with underscores
+
+The following table maps the original names to the converted output.
+
+The definitions and details of the original features can be found in the files
+features.txt and features_info.txt within the UCI HAR Dataset.
+
+NOTE that in the run_analysis.R output the values produced are the **mean** of the 
+original features for a given pair of Subject and Activity. Please refer to README.md for
+more details.
+
+
+UCI HAR Dataset name               run_analysis.R output
+==============================     ======================
+tBodyAcc-mean()-X                  tBodyAccmeanX
+tBodyAcc-mean()-Y                  tBodyAccmeanY
+tBodyAcc-mean()-Z                  tBodyAccmeanZ
+tBodyAcc-std()-X                   tBodyAccstdX
+tBodyAcc-std()-Y                   tBodyAccstdY
+tBodyAcc-std()-Z                   tBodyAccstdZ
+tGravityAcc-mean()-X               tGravityAccmeanX
+tGravityAcc-mean()-Y               tGravityAccmeanY
+tGravityAcc-mean()-Z               tGravityAccmeanZ
+tGravityAcc-std()-X                tGravityAccstdX
+tGravityAcc-std()-Y                tGravityAccstdY
+tGravityAcc-std()-Z                tGravityAccstdZ
+tBodyAccJerk-mean()-X              tBodyAccJerkmeanX
+tBodyAccJerk-mean()-Y              tBodyAccJerkmeanY
+tBodyAccJerk-mean()-Z              tBodyAccJerkmeanZ
+tBodyAccJerk-std()-X               tBodyAccJerkstdX
+tBodyAccJerk-std()-Y               tBodyAccJerkstdY
+tBodyAccJerk-std()-Z               tBodyAccJerkstdZ
+tBodyGyro-mean()-X                 tBodyGyromeanX
+tBodyGyro-mean()-Y                 tBodyGyromeanY
+tBodyGyro-mean()-Z                 tBodyGyromeanZ
+tBodyGyro-std()-X                  tBodyGyrostdX
+tBodyGyro-std()-Y                  tBodyGyrostdY
+tBodyGyro-std()-Z                  tBodyGyrostdZ
+tBodyGyroJerk-mean()-X             tBodyGyroJerkmeanX
+tBodyGyroJerk-mean()-Y             tBodyGyroJerkmeanY
+tBodyGyroJerk-mean()-Z             tBodyGyroJerkmeanZ
+tBodyGyroJerk-std()-X              tBodyGyroJerkstdX
+tBodyGyroJerk-std()-Y              tBodyGyroJerkstdY
+tBodyGyroJerk-std()-Z              tBodyGyroJerkstdZ
+tBodyAccMag-mean()                 tBodyAccMagmean
+tBodyAccMag-std()                  tBodyAccMagstd
+tGravityAccMag-mean()              tGravityAccMagmean
+tGravityAccMag-std()               tGravityAccMagstd
+tBodyAccJerkMag-mean()             tBodyAccJerkMagmean
+tBodyAccJerkMag-std()              tBodyAccJerkMagstd
+tBodyGyroMag-mean()                tBodyGyroMagmean
+tBodyGyroMag-std()                 tBodyGyroMagstd
+tBodyGyroJerkMag-mean()            tBodyGyroJerkMagmean
+tBodyGyroJerkMag-std()             tBodyGyroJerkMagstd
+fBodyAcc-mean()-X                  fBodyAccmeanX
+fBodyAcc-mean()-Y                  fBodyAccmeanY
+fBodyAcc-mean()-Z                  fBodyAccmeanZ
+fBodyAcc-std()-X                   fBodyAccstdX
+fBodyAcc-std()-Y                   fBodyAccstdY
+fBodyAcc-std()-Z                   fBodyAccstdZ
+fBodyAcc-meanFreq()-X              fBodyAccmeanFreqX
+fBodyAcc-meanFreq()-Y              fBodyAccmeanFreqY
+fBodyAcc-meanFreq()-Z              fBodyAccmeanFreqZ
+fBodyAccJerk-mean()-X              fBodyAccJerkmeanX
+fBodyAccJerk-mean()-Y              fBodyAccJerkmeanY
+fBodyAccJerk-mean()-Z              fBodyAccJerkmeanZ
+fBodyAccJerk-std()-X               fBodyAccJerkstdX
+fBodyAccJerk-std()-Y               fBodyAccJerkstdY
+fBodyAccJerk-std()-Z               fBodyAccJerkstdZ
+fBodyAccJerk-meanFreq()-X          fBodyAccJerkmeanFreqX
+fBodyAccJerk-meanFreq()-Y          fBodyAccJerkmeanFreqY
+fBodyAccJerk-meanFreq()-Z          fBodyAccJerkmeanFreqZ
+fBodyGyro-mean()-X                 fBodyGyromeanX
+fBodyGyro-mean()-Y                 fBodyGyromeanY
+fBodyGyro-mean()-Z                 fBodyGyromeanZ
+fBodyGyro-std()-X                  fBodyGyrostdX
+fBodyGyro-std()-Y                  fBodyGyrostdY
+fBodyGyro-std()-Z                  fBodyGyrostdZ
+fBodyGyro-meanFreq()-X             fBodyGyromeanFreqX
+fBodyGyro-meanFreq()-Y             fBodyGyromeanFreqY
+fBodyGyro-meanFreq()-Z             fBodyGyromeanFreqZ
+fBodyAccMag-mean()                 fBodyAccMagmean
+fBodyAccMag-std()                  fBodyAccMagstd
+fBodyAccMag-meanFreq()             fBodyAccMagmeanFreq
+fBodyBodyAccJerkMag-mean()         fBodyBodyAccJerkMagmean
+fBodyBodyAccJerkMag-std()          fBodyBodyAccJerkMagstd
+fBodyBodyAccJerkMag-meanFreq()     fBodyBodyAccJerkMagmeanFreq
+fBodyBodyGyroMag-mean()            fBodyBodyGyroMagmean
+fBodyBodyGyroMag-std()             fBodyBodyGyroMagstd
+fBodyBodyGyroMag-meanFreq()        fBodyBodyGyroMagmeanFreq
+fBodyBodyGyroJerkMag-mean()        fBodyBodyGyroJerkMagmean
+fBodyBodyGyroJerkMag-std()         fBodyBodyGyroJerkMagstd
+fBodyBodyGyroJerkMag-meanFreq()    fBodyBodyGyroJerkMagmeanFreq
